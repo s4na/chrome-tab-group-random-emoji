@@ -12,6 +12,8 @@ function getRandomEmoji() {
 
 chrome.tabGroups.onCreated.addListener((group) => {
   if (!group.title) {
-    chrome.tabGroups.update(group.id, { title: getRandomEmoji() });
+    chrome.tabGroups.update(group.id, { title: getRandomEmoji() }).catch(() => {
+      // Group may have been removed before update completed
+    });
   }
 });
