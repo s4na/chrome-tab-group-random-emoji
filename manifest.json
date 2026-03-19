@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Group Random Emoji",
+  "version": "1.0.0",
+  "description": "Automatically assigns a random emoji to new tab groups",
+  "permissions": ["tabGroups"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}
